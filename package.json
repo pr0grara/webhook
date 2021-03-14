@@ -6,6 +6,7 @@
   "scripts": {
     "start": "babel-node .",
     "dev": "nodemon --exec babel-node .",
+    "build": "babel server.js --out-file server.compiled.js",
     "api": "node --exec babel-node routes/api/typeform.js"
   },
   "keywords": [],
