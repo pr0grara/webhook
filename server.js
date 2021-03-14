@@ -18,12 +18,20 @@ app.use(express.json());
 
 routes(app);
 
-app.post('/hook', (req, res) => {
+app.get('/hook', (req, res) => {
     createHook("AhCdegfT", req.body)
     .then(res => {
         console.log(res)
     })
     console.log("AhCdegfT", req.body);
+    res.status(200).end();
+});
+
+app.get('/', (req, res) => {
+    console.log(':)');
+    console.log(req);
+    console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+    console.log(req.body);
     res.status(200).end();
 });
 
